@@ -1,14 +1,12 @@
 Projects: Virus Cluster Shooting Game
 ===
-
 Week 10: The final ENVIRO project of EE520 course
-
 Combination of hw10 task 3 and virus demo
----
 
 Project Goal
 ===
 Making a Virus Cluster Shooting Game
+
 - ***Leader does circular movement and attach virus to become following virus cluster.***
 - ***Virus can infect cell. Infected cell will pops and populate more virus.***
 - ***Player can manipulate car and shoot virus using bullet.***
@@ -17,8 +15,10 @@ Key Challenges
 ===
 
 1. How to make virus following leader 
+
 In `virus.h`
 > Listened collision event of leader in `init()` function:
+> 
 > When colliding, virus attach to leader, set bool `follow` to be true and cancel listening collision of leader.
 > ```c++
 > //watch collision with leader, if leader collide, virus attach to leader   
@@ -31,10 +31,10 @@ In `virus.h`
 > ```
 
 > Changed style of virus in `update()` function:
+> 
 > define `tem_style` json. 
 > ```json
 > json tem_style() {
->     //the temporary style of virus when collide by leader or follow virus
 >     return {  {"fill", "orange" }, 
 >               {"stroke", "red"}, 
 >               {"strokeWidth", "10px"},
@@ -54,6 +54,7 @@ In `virus.h`
 
 2. How to make virus following other followed virus
 > Added `FollowVirus` repersenting following virus of leader.
+> 
 > Listened collision event of bullet/leader/follow virus in `init()` function:
 > ```c++
 > //if collide by bullet, follow virus disappear
@@ -76,3 +77,43 @@ In `virus.h`
 > });
 > ```
 
+Install and Run ENVIRO
+===
+
+To start a Docker container with ENVIRO pre-loaded into it, do:
+
+```bash
+docker run -p80:80 -p8765:8765 -v $PWD:/source -it klavins/enviro:alpha bash
+esm start
+```
+
+Make the project and start the enviro sever as follows.
+```bash
+make
+enviro
+```
+
+Then navigate to `http://localhost` you should see this game. 
+
+You can press `Ctrl-C` to stop the enviro server. 
+
+Run Project
+===
+How to run play this game:
+
+- ***Leader automatically does circular movement and attach virus.***
+- ***Virus randomly move around to infect cell or attach leader.***
+- ***Player can manipulate car by A/ W/ S/ D on keyboard. Shooting bullet by pressing Space to hit virus.***
+
+Reference
+===
+Github Repo:
+
+[ENVIRO] (https://github.com/klavinslab/enviro) 
+[EE520-W20] (https://github.com/klavins/EEP520-W20)
+
+That's it!
+===
+Thank you for your patience~
+
+<img src="https://media0.giphy.com/media/l0MYyDa8S9ghzNebm/source.gif">
