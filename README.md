@@ -1,6 +1,7 @@
 Projects: Virus Cluster Shooting Game
 ===
 Week 10: The final ENVIRO project of EE520 course
+
 Combination of hw10 task 3 and virus demo
 
 Project Goal
@@ -16,7 +17,8 @@ Key Challenges
 
 1. How to make virus following leader 
 
-In `virus.h`
+> In `virus.h`
+> 
 > Listened collision event of leader in `init()` function:
 > 
 > When colliding, virus attach to leader, set bool `follow` to be true and cancel listening collision of leader.
@@ -44,6 +46,7 @@ In `virus.h`
 > ```
 > 
 > if `follow` is true, set virus style to be `tem_style`. 
+> 
 > ```c++
 > set_style(tem_style());
 > if (count-- <= 0) {
@@ -65,11 +68,13 @@ In `virus.h`
 >	  ignore_collisions_with("Bullet");
 >	  hit = true;
 > }); 
+> 
 > //if collide with leader, virus follow and attach leader      
 > notice_collisions_with("Leader", [&](Event &e) {
 >	  Agent& leader = find_agent(e.value()["id"]);
 >	  attach_to(leader);
 > });  
+> 
 > //if collide with follow virus, follow this follow virus
 > notice_collisions_with("FollowVirus", [&](Event &e) {
 > 	  Agent& follow_virus = find_agent(e.value()["id"]);
@@ -99,7 +104,7 @@ You can press `Ctrl-C` to stop the enviro server.
 
 Run Project
 ===
-How to run play this game:
+How to play this game:
 
 - ***Leader automatically does circular movement and attach virus.***
 - ***Virus randomly move around to infect cell or attach leader.***
@@ -110,6 +115,7 @@ Reference
 Github Repo:
 
 [ENVIRO] (https://github.com/klavinslab/enviro) 
+
 [EE520-W20] (https://github.com/klavins/EEP520-W20)
 
 That's it!
