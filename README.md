@@ -37,12 +37,12 @@ Key Challenges
 > Changed style of virus in `update()` function:
 > 
 > define `tem_style` json. 
-> ```json
+> ```c++
 > json tem_style() {
->     return {  {"fill", "orange" }, 
->               {"stroke", "red"}, 
->               {"strokeWidth", "10px"},
->               {"strokeOpacity", "0.25"}
+>     return {{"fill", "orange" }, 
+>             {"stroke", "red"}, 
+>             {"strokeWidth", "10px"},
+>             {"strokeOpacity", "0.25"}
 >            };
 > }      
 > ```
