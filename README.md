@@ -4,13 +4,15 @@ Week 10: The final ENVIRO project of EE520 course
 
 Combination of hw10 task 3 and virus demo
 
+
 Project Goal
 ===
 Making a Virus Cluster Shooting Game
 
-- ***Leader does circular movement and attach virus to become following virus cluster.***
+- ***Leader does circular movement and attach virus to become following red virus cluster.***
 - ***Virus can infect cell. Infected cell will pops and populate more virus.***
 - ***Player can manipulate car and shoot virus using bullet.***
+
 
 Key Challenges
 ===
@@ -82,6 +84,7 @@ Key Challenges
 > });
 > ```
 
+
 Install and Run ENVIRO
 ===
 
@@ -102,6 +105,7 @@ Then navigate to `http://localhost` you should see this game.
 
 You can press `Ctrl-C` to stop the enviro server. 
 
+
 Run Project
 ===
 How to play this game:
@@ -110,6 +114,7 @@ How to play this game:
 - ***Virus randomly move around to infect cell or attach leader.***
 - ***Player can manipulate car by A/ W/ S/ D on keyboard. Shooting bullet by pressing Space to hit virus.***
 
+
 Reference
 ===
 Github Repo:
@@ -117,6 +122,7 @@ Github Repo:
 [ENVIRO] (https://github.com/klavinslab/enviro) 
 
 [EE520-W20] (https://github.com/klavins/EEP520-W20)
+
 
 That's it!
 ===
